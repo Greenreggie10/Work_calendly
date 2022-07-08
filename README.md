@@ -5,7 +5,7 @@
 /*HTML, CSS, by jQuery*/
 
 <!-- URL to hosted site -->
-    };
+ https://greenreggie10.github.io/Work_calendly/ };
 
 <!-- picture of site -->
 ![alt text]()
