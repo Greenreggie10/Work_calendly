@@ -15,7 +15,7 @@ displayDate.innerHTML = currentDay
 for (let i = 0; i < textAreas.length; i++) {
     var element = textAreas[i];
     //color'red'
-    var rowSlotTime = $(element).siblings().attr('id');
+    var rowSlotTime = $(element).attr('id');
     if (rowSlotTime < currentHour){ $(this).addClass('past')
 } else if (element == currentHour) {
     $(this).removeClass('past')
@@ -42,13 +42,13 @@ saveBtn()
 function saveBtn () {
 	return localStorage.getItem('saveBtn');  
 } // Gets the value of 'nameOfItem' and returns it
-console.log(getValue()); //'value';
+
 
 });
 
-var timeblockTasks = function(){
-    task =JSON.parse(localStorage.getItem("tasks"));
-   
-}
+    function timeblockTasks() {
+        task = JSON.parse(localStorage.getItem("tasks"));
+
+    }
 
 });
