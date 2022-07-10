@@ -15,11 +15,15 @@ for (let i = 0; i < textAreas.length; i++) {
     var element = textAreas[i];
     //color'red'
     var rowSlotTime = $(element).siblings().attr('id');
-    if (condition){
-
-    }
-    
-};
+    if (element < currentHour){ $(this).addClass('past')
+} else if (element == currentHour) {
+    $(this).removeClass('past')
+    $(this).addClass('present')
+} else { 
+    $(this).removeClass('past')
+    $(this).removeClass('present')
+    $(this).addClass('future')
+}};
 
 //savebtn
 
@@ -38,7 +42,7 @@ var textEl = $(this).siblings("textarea")
 console.log(hourEl,textEl);
 
 var timeblockTasks = function(){
-    task =JSO.parse(localStorage.getItem("tasks"));
+    task =JSON.parse(localStorage.getItem("tasks"));
 
 }
 
