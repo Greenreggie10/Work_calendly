@@ -26,6 +26,13 @@ for (let i = 0; i < textAreas.length; i++) {
 }};
 
 //savebtn
+function () {
+    var savebtn = document.getElementById('#saveBtn');
+    if (col-1.value != '') {
+        saveBtn.disabled = false;
+    } else {
+        saveBtn.disabled = true;
+    }
 
 //delete task
 
