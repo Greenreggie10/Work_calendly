@@ -18,3 +18,4 @@ REGINALD GREEN GITHUB@GREENREGGIE10
 
 <!-- updates -->
 "initial setup"
+"javascript"
