@@ -19,12 +19,12 @@ for (let i = 0; i < textAreas.length; i++) {
     var rowSlotTime = $(element).attr('id');
     if (rowSlotTime < currentHour){ $(element).addClass('past')
 } else if (rowSlotTime == currentHour) {
-    $(this).removeClass('past')
-    $(this).addClass('present')
+    $(element).removeClass('past')
+    $(element).addClass('present')
 } else { 
-    $(this).removeClass('past')
-    $(this).removeClass('present')
-    $(this).addClass('future')
+    $(element).removeClass('past')
+    $(element).removeClass('present')
+    $(element).addClass('future')
 }};
 
 //btn save input
