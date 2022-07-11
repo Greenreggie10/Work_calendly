@@ -28,8 +28,7 @@ for (let i = 0; i < textAreas.length; i++) {
 
 //btn save input
 $(".saveBtn").on("click", function(){
-    var hourEl = $(this).siblings("textarea").attr("id");
-    
+    var hourEl = $(this).siblings("textarea").attr("id"); 
     //retrieve current input
     var textEl = $(this).siblings("textarea")
     .val()
@@ -37,6 +36,13 @@ $(".saveBtn").on("click", function(){
     console.log(hourEl,textEl);
 
 //save hourEl textEl localStorage;
+
+localStorage.setItem(hourEl, textEl);  
+saveBtn() 
+function saveBtn () {
+	return localStorage.getItem('saveBtn');  
+} // Gets the value of 'nameOfItem' and returns it
+console.log(getValue()); //'value';
 
 });
 
