@@ -1,6 +1,7 @@
 $(document).ready(function() {
-//var current = document.querySelector('#currentDay')  
-var tasks = {};
+
+    //var current = document.querySelector('#currentDay')  
+    var tasks = {};
 //var saveBtn = document.querySelector('.saveBtn');
 var textAreas = $('.time-block');
 var currentHour = moment().hour();
@@ -16,8 +17,8 @@ for (let i = 0; i < textAreas.length; i++) {
     var element = textAreas[i];
     //color'red'
     var rowSlotTime = $(element).attr('id');
-    if (rowSlotTime < currentHour){ $(this).addClass('past')
-} else if (element == currentHour) {
+    if (rowSlotTime < currentHour){ $(element).addClass('past')
+} else if (rowSlotTime == currentHour) {
     $(this).removeClass('past')
     $(this).addClass('present')
 } else { 
@@ -34,21 +35,16 @@ $(".saveBtn").on("click", function(){
     .val()
     .trim();
     console.log(hourEl,textEl);
-
-//save hourEl textEl localStorage;
-
-localStorage.setItem(hourEl, textEl);  
-saveBtn() 
-function saveBtn () {
-	return localStorage.getItem('saveBtn');  
-} // Gets the value of 'nameOfItem' and returns it
-
-
-});
-
-    function timeblockTasks() {
-        task = JSON.parse(localStorage.getItem("tasks"));
-
-    }
-
+    
+    //save hourEl textEl localStorage;
+    
+    localStorage.setItem(hourEl, textEl);  
+    saveBtn() 
+    function saveBtn () {
+        return localStorage.getItem('saveBtn')};
+        
+        function timeblockTasks() {
+            task = JSON.parse(localStorage.getItem("tasks"))
+        }
+    })
 });
