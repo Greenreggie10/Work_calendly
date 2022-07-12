@@ -1,6 +1,7 @@
 $(document).ready(function() {
-//var current = document.querySelector('#currentDay')  
-var tasks = {};
+
+    //var current = document.querySelector('#currentDay')  
+    var tasks = {};
 //var saveBtn = document.querySelector('.saveBtn');
 var textAreas = $('.time-block');
 var currentHour = moment().hour();
@@ -15,15 +16,15 @@ displayDate.innerHTML = currentDay
 for (let i = 0; i < textAreas.length; i++) {
     var element = textAreas[i];
     //color'red'
-    var rowSlotTime = $(element).siblings().attr('id');
-    if (rowSlotTime < currentHour){ $(this).addClass('past')
-} else if (element == currentHour) {
-    $(this).removeClass('past')
-    $(this).addClass('present')
+    var rowSlotTime = $(element).attr('id');
+    if (rowSlotTime < currentHour){ $(element).addClass('past')
+} else if (rowSlotTime == currentHour) {
+    $(element).removeClass('past')
+    $(element).addClass('present')
 } else { 
-    $(this).removeClass('past')
-    $(this).removeClass('present')
-    $(this).addClass('future')
+    $(element).removeClass('past')
+    $(element).removeClass('present')
+    $(element).addClass('future')
 }};
 
 //btn save input
@@ -34,21 +35,16 @@ $(".saveBtn").on("click", function(){
     .val()
     .trim();
     console.log(hourEl,textEl);
-
-//save hourEl textEl localStorage;
-
-localStorage.setItem(hourEl, textEl);  
-saveBtn() 
-function saveBtn () {
-	return localStorage.getItem('saveBtn');  
-} // Gets the value of 'nameOfItem' and returns it
-console.log(getValue()); //'value';
-
-});
-
-var timeblockTasks = function(){
-    task =JSON.parse(localStorage.getItem("tasks"));
-   
-}
-
+    
+    //save hourEl textEl localStorage;
+    
+    localStorage.setItem(hourEl, textEl);  
+    saveBtn() 
+    function saveBtn () {
+        return localStorage.getItem('saveBtn')};
+        
+        function timeblockTasks() {
+            task = JSON.parse(localStorage.getItem("tasks"))
+        }
+    })
 });

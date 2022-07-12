@@ -5,7 +5,7 @@
 /*HTML, CSS, by jQuery*/
 
 <!-- URL to hosted site -->
-  };
+ https://greenreggie10.github.io/Work_calendly/ };
 
 <!-- picture of site -->
 ![alt text](./assets/images/Screenshot%20(30).png)
@@ -21,4 +21,5 @@ REGINALD GREEN GITHUB@GREENREGGIE10
 "javascript"
 "class/color"
 "local storage"
-
+"finale"
+"finale"
